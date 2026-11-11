@@ -9,6 +9,7 @@ Each stage ends by committing a file the next stage reads. The commit history is
 | Stage | Artifact | Holds |
 |---|---|---|
 | Plan | `intent.md` | The problem, the outcome wanted, constraints, open questions |
+| Plan | `backlog.md` | Feature pitches from the room, and which one won each round |
 | Design | `spec.md` | Exact behavior and what done means |
 | Build | `plan.md` | The accepted implementation plan: files, order of work, risks, and how each step is proven |
 | Build | Code and tests | The diff, and a test for each rule |
@@ -90,6 +91,12 @@ The game never reads the clock. `src/game.js` exports an update function that ta
 9. R restores exactly the state described in rule 1, from any state.
 10. The screen always shows the score and remaining lives. In `ready`, `won`, and `lost` it also shows what key to press.
 11. Undecided: what happens to the ball after a life is lost with lives remaining. See the open question in `intent.md`. Replace this rule with the answer before building.
+
+## Features
+
+Each feature added after the first version gets its own heading here, with its own numbered rules, written before any code for it.
+
+- None yet.
 
 ## Done means
 

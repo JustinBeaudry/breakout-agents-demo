@@ -10,7 +10,7 @@ A one hour workshop on building with coding agents needs something to build. It 
 
 ## Proposed outcome
 
-A small Breakout game, built live by a coding agent, whose rules can be checked by a test.
+A small Breakout game, built live by a coding agent, whose rules can be checked by a test. Once the first version plays, the room votes on one feature at a time from `backlog.md`, and each winner is built through the same loop.
 
 ## Affected users and systems
 
@@ -32,4 +32,8 @@ Each one is answered with the room, recorded in `spec.md`, and then removed from
 
 ## Not intended
 
-Sound, multiple levels, mouse or touch input, high scores, pause, mobile layout. Power-ups are not part of the first version. A later change may add one, starting with a change to this file.
+The first version has no sound, levels, mouse or touch input, high scores, pause, or power-ups. Anything beyond the first version comes from `backlog.md`, one feature per round, chosen by vote. Each chosen feature is recorded below before `spec.md` changes.
+
+## Features added by vote
+
+- None yet.

@@ -4,7 +4,7 @@ Standing instructions for any coding agent working in this repository. Read this
 
 ## Project
 
-A small Breakout game used as a live workshop demo. `intent.md` says why it exists. `spec.md` is the source of truth for behavior, file layout, and commands. `plan.md` is the accepted implementation plan.
+A small Breakout game used as a live workshop demo. `intent.md` says why it exists. `spec.md` is the source of truth for behavior, file layout, and commands. `plan.md` is the accepted implementation plan. `backlog.md` lists feature pitches and the winner of each round.
 
 ## Commands
 
@@ -30,6 +30,7 @@ A small Breakout game used as a live workshop demo. `intent.md` says why it exis
 6. If the implementation departs from the plan, update `plan.md` in the same commit.
 7. If three attempts to fix the same failure do not work, stop and say so. The plan is wrong.
 8. Commit after each completed, passing step, with a message that says what changed and why.
+9. One feature per round. Build only the feature recorded as the current round's winner in `backlog.md`. Do not start, prepare for, or partly build any other pitch.
 
 ## When something breaks
 
