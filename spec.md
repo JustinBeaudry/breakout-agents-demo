@@ -1,10 +1,19 @@
 # Breakout: Specification
 
-This file is the agreement about what the game does. If the game and this file disagree, one of them is wrong. Fix the spec first, then the code.
+Written from `intent.md`. This file is the agreement about what the game does. If the game and this file disagree, one of them is wrong. Fix the spec first, then the code.
 
-## Intent
+## Artifacts
 
-A small Breakout game built live in a one hour workshop to demonstrate Plan, Work, Review, Compound with a coding agent. It has to be playable on a projector, and its rules have to be checkable by a test.
+Each stage ends by committing a file the next stage reads. The commit history is the record of what was decided and when.
+
+| Stage | Artifact | Holds |
+|---|---|---|
+| Plan | `intent.md` | The problem, the outcome wanted, constraints, open questions |
+| Design | `spec.md` | Exact behavior and what done means |
+| Build | `plan.md` | The accepted implementation plan: files, order of work, risks, and how each step is proven |
+| Build | Code and tests | The diff, and a test for each rule |
+
+Nothing is implemented without an accepted `plan.md`. If the implementation departs from the plan, `plan.md` is updated in the same commit.
 
 ## Constraints
 
@@ -80,19 +89,11 @@ The game never reads the clock. `src/game.js` exports an update function that ta
 8. When the last brick is removed, the state becomes `won`.
 9. R restores exactly the state described in rule 1, from any state.
 10. The screen always shows the score and remaining lives. In `ready`, `won`, and `lost` it also shows what key to press.
-
-## Open decision
-
-To be decided with the room before the first build. Record the answer here and delete this heading.
-
-- After losing a life with lives remaining, does the ball relaunch on its own, or wait on the paddle in `ready` for Space?
-
-## Not in this version
-
-Sound, multiple levels, mouse or touch input, high scores, pause, power-ups, mobile layout.
+11. Undecided: what happens to the ball after a life is lost with lives remaining. See the open question in `intent.md`. Replace this rule with the answer before building.
 
 ## Done means
 
-- `node --test` passes, with at least one test per numbered rule that `src/game.js` can check (rules 1 to 9).
+- `plan.md` was accepted before any code was written, and it matches what was built.
+- `node --test` passes, with at least one test per numbered rule that `src/game.js` can check (rules 1 to 9, and rule 11 once decided).
 - A person has played the game in a browser and seen: a brick removed and the score change, a life lost, a restart, and either a win or a loss.
 - Every line of the change can be explained by whoever approved it.
